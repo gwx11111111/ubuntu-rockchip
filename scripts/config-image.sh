@@ -102,6 +102,11 @@ for type in $target; do
     } > ${chroot_dir}/etc/udev/rules.d/90-naming-audios.rules
 
         # Enable bluetooth for AP6275S
+        cp ${overlay_dir}/usr/lib/systemd/system/BCM4362A2.hcd ${chroot_dir}/lib/firmware/BCM4362A2.hcd
+        cp ${overlay_dir}/usr/lib/systemd/system/ap6275s_config.txt ${chroot_dir}/lib/lib/firmware/ap6275s_config.txt
+        cp ${overlay_dir}/usr/lib/systemd/system/clm_bcm43752a2_ag.blob ${chroot_dir}/lib/lib/firmware/clm_bcm43752a2_ag.blob
+        cp ${overlay_dir}/usr/lib/systemd/system/fw_bcm43752a2_ag.bin ${chroot_dir}/lib/lib/firmware/fw_bcm43752a2_ag.bin
+        cp ${overlay_dir}/usr/lib/systemd/system/nvram_ap6275s.txt ${chroot_dir}/lib/lib/firmware/nvram_ap6275s.txt
         cp ${overlay_dir}/usr/lib/systemd/system/ap6275s-bluetooth.service ${chroot_dir}/usr/lib/systemd/system/ap6275s-bluetooth.service
         cp ${overlay_dir}/usr/lib/scripts/ap6275s-bluetooth.sh ${chroot_dir}/usr/lib/scripts/ap6275s-bluetooth.sh
         cp ${overlay_dir}/usr/bin/brcm_patchram_plus ${chroot_dir}/usr/bin/brcm_patchram_plus
